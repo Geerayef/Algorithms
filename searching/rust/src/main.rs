@@ -1,24 +1,21 @@
 use std::env::args;
-mod binary_search;
+mod binary;
 
 fn handle_cli_args(mut args: Vec<&str>) {
     let clargs_len = args.len();
-    // println!("~~~~~ Number of given arguments is {}", clargs_len);
-    // println!("~~~~~ First argument is {}", &args[0]);
     assert_ne!(clargs_len, 0);
 
     for i in 0..clargs_len {
         match args[i] {
-            "--search" => {
+            "search" => {
                 assert!(i+2 <= clargs_len, "~~~~~ [ERROR]: Invalid number of arguments.\n
                     Program received {clargs_len} arguments, expected at least 3.\n
-                    Flag --search accepts 2 arguments: 1) Search algorithm name & 2) Element to search for");
+                    Flag search accepts 2 arguments: 1) Search algorithm name & 2) Element to search for");
                 let search_args = args.drain(i+1..=i+2).collect();
                 parse_search_args(search_args);
                 break;
             },
-            "--sort"   => println!("~~~~~ I matched one of the arguments with --sort"),
-            &_         => todo!(),
+            &_ => todo!(),
         }
     }
 }
@@ -36,7 +33,7 @@ fn call(algorithm: String, wanted_value: f32) {
             number_arr[i] = number_arr[i - 1] + 2.0 * 2.0;
         }
 
-        binary_search::binary_search(&number_arr, wanted_value);
+        binary::search(&number_arr, wanted_value);
     }
 }
 

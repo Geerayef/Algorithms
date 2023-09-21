@@ -1,4 +1,4 @@
-pub fn binary_search(arr: &[f32], wanted_number: f32) -> bool {
+pub fn search(arr: &[f32], wanted_number: f32) -> bool {
     println!("~~~~~ Looking for the number {wanted_number} in the given array.");
     let mut found: bool = false;
     let mut low = 0;
@@ -16,8 +16,7 @@ pub fn binary_search(arr: &[f32], wanted_number: f32) -> bool {
         }
     }
     if found {
-        println!(
-            "Found {wanted_number}: {found}");
+        println!("Found {wanted_number}: {found}");
         return found;
     }
     return false;
