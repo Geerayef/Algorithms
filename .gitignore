@@ -1,2 +1,4 @@
 ./sorting/ocaml/merge/_build
 ./sorting/ocaml/merge/_build/*
+./searching/rust/target
+./searching/rust/target/*
