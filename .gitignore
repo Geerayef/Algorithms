@@ -7,3 +7,5 @@ searching/rust/target/*
 dataStructures/linkedList/c/compile_commands.json
 dataStructures/linkedList/c/linkedList
 dataStructures/linkedList/c/main
+dataStructures/queue/c/compile_commands.json
+dataStructures/queue/c/queue
