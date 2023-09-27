@@ -9,3 +9,5 @@ dataStructures/linkedList/c/linkedList
 dataStructures/linkedList/c/main
 dataStructures/queue/c/compile_commands.json
 dataStructures/queue/c/queue
+dataStructures/stack/c/compile_commands.json
+dataStructures/stack/c/stack
