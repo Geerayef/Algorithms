@@ -3,7 +3,7 @@ mod binary;
 
 fn handle_cli_args(mut args: Vec<&str>) {
     let clargs_len = args.len();
-    assert_ne!(clargs_len, 0);
+    assert_ne!(clargs_len, 0, "~~~~~ No arguments have been provided.");
 
     for i in 0..clargs_len {
         match args[i] {
