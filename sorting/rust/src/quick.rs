@@ -37,9 +37,8 @@ fn partition(array: &mut [i32], low: usize, high: usize) -> usize {
     }
 
     if array[bigger_idx] != pivot {
-        tmp = array[high];
         array[high] = array[bigger_idx];
-        array[bigger_idx] = tmp;
+        array[bigger_idx] = pivot;
     }
 
     return bigger_idx;
